@@ -14,6 +14,9 @@
 \usepackage{array}
 \usepackage{hyperref}
 \usepackage{float}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+
 
 \tikzset{
 	etape/.style={draw, rounded corners=3pt, minimum width=4.4cm, minimum height=1.1cm,
@@ -212,5 +215,61 @@
 	Tous les diagrammes réalisés sont accessibles au même lien mais sur des pages différentes. 
 	\begin{itemize}
 		\item \href{https://lucid.app/lucidchart/24c1c51b-c5d9-4874-8372-94b7308577d1/edit?viewport_loc=-1163\%2C-384\%2C3006\%2C1270\%2CS0-PFrnG1pE9&invitationId=inv_87c0ee0d-7f44-47a7-8205-060f06157fbc}{Diagramme de cas d'utilisation et d'activités}
+		
+		\item 
+		\href{https://lucid.app/lucidchart/741f6a2b-3b74-4b4e-b0e5-5848bc77c504/edit?viewport_loc=-679%2C-42%2C2156%2C883%2Cclasses&invitationId=inv_79bca8a8-1596-40c4-864a-2f5000a2be80}{Diagramme de classe, de séquences et composants}
 	\end{itemize}
+	
+	\section{Exercice Bonus}
+	Une chambre d'hôtel avec un petit déjeuner coûte $160$ euros au total.
+	Le petit déjeuner coûte $120$ euros de moins que la chambre d'hôtel.
+	
+	Trouver le prix de la chambre et le prix du petit déjeuner.
+	
+	Notons, en euros :
+	\begin{itemize}
+		\item $c$ : le prix de la chambre d'hôtel ;
+		\item $p$ : le prix du petit déjeuner.
+	\end{itemize}
+	
+	La première phrase de l'énoncé indique que le total vaut $160$ euros :
+	\[
+	c + p = 160. \tag{1}
+	\]
+	
+	La seconde phrase indique que le petit déjeuner coûte $120$ euros de moins que la chambre :
+	\[
+	p = c - 120. \tag{2}
+	\]
+	
+	On obtient donc le système
+	\[
+	\begin{cases}
+		c + p = 160 \\
+		p = c - 120
+	\end{cases}
+	\]
+	
+	On remplace $p$ par $c - 120$ dans l'équation~(1) :
+	\begin{align*}
+		c + (c - 120) &= 160 \\
+		2c - 120      &= 160 \\
+		2c            &= 160 + 120 \\
+		2c            &= 280 \\
+		c             &= \frac{280}{2} = 140.
+	\end{align*}
+	
+	On reporte cette valeur dans l'équation~(2) :
+	\[
+	p = c - 120 = 140 - 120 = 20.
+	\]
+	
+	\begin{tcolorbox}[colback=blue!5!white,colframe=blue!50!black,title=Réponse]
+		\[
+		\boxed{c = 140\ \text{euros}} \qquad \text{et} \qquad \boxed{p = 20\ \text{euros}}
+		\]
+		La chambre d'hôtel coûte $140$ euros et le petit déjeuner coûte $20$ euros.
+	\end{tcolorbox}
+	
+	
 \end{document}
